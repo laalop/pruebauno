@@ -28,6 +28,4 @@ def Porestatura(estatura):
   resultados=float(resultados)
   return resultados
 
-
-if __name__=="__main__":
-  app.run()
+print(Por_Nombre(jose))
