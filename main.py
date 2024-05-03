@@ -9,7 +9,7 @@ base=pd.read_excel("perros.xlsx")
 def Principal():
   return "Esta es una API que te muetra el nombre de perros, raza y estatura"
 
-@app.route("/conumero/<Numero>")
+@app.route("/Por_Numero/<Numero>")
 def PorNumero(Numero):
   Numero=int(Numero)
   fila=base[base["Numero"]==Numero]
