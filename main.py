@@ -25,7 +25,7 @@ def Porraza(raza):
 @app.route("/Por_estatura/<estatura>")
 def Porestatura(estatura):
   resultados=base[base["estatura"]==estatura]
-  resultados=int(resultados)
+  resultados=float(resultados)
   return resultados
 
 
