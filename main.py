@@ -13,8 +13,21 @@ def Principal():
 def PorNumero(Numero):
   Numero=int(Numero)
   fila=base[base["Numero"]==Numero]
-  respuesta=f"El Perro {Numero} es de raza {fila.loc[:,'raza']}"
+  respuesta=f"El Perro {Numero} es {fila.loc[:,'Nombre']}"
   return respuesta
+
+@app.route("/Por_raza/<raza>")
+def Porraza(raza):
+  resultados=base[base["raza"]==raza]
+  resultados=srt(resultados)
+  return resultados
+
+@app.route("/Por_estatura/<estatura>")
+def Porestatura(estatura):
+  resultados=base[base["estatura"]==estatura]
+  resultados=int(resultados)
+  return resultados
+
 
 if __name__=="__main__":
   app.run()
