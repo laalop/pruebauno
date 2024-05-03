@@ -16,17 +16,5 @@ def PorNumero(Numero):
   respuesta=f"El Perro {Numero} es {fila.loc[:,'nombre']}"
   return respuesta
 
-@app.route("/Por_raza/<raza>")
-def Porraza(raza):
-  resultados=base[base["raza"]==raza]
-  resultados=srt(resultados)
-  return resultados
-
-@app.route("/Por_estatura/<estatura>")
-def Porestatura(estatura):
-  resultados=base[base["estatura"]==estatura]
-  resultados=float(resultados)
-  return resultados
-
 if __name__=="__main__":
   app:run()
