@@ -16,5 +16,6 @@ def PorNumero(Numero):
   respuesta=f"El Perro {Numero} es de raza {fila.loc[:,'raza']}"
   return respuesta
 
+print(Por_Numero(2))
+
 if __name__=="__main__":
-  app.run()
