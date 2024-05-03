@@ -1,5 +1,3 @@
-pandas
-openpyxl
 import pandas as pd
 from flask import Flask
 
