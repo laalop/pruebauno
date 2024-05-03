@@ -9,7 +9,7 @@ base=pd.read_excel("perros.xlsx")
 def Principal():
   return "Esta es una API que te muetra el nombre de perros, raza y estatura"
 
-@app.router("/Por_Numero/<Numero>")
+@app.route("/Por_Numero/<Numero>")
 def PorNumero(Numero):
   Numero=int(Numero)
   fila=base [base["Numero"]==Numero]
@@ -22,7 +22,7 @@ def PorTipo(Tipo):
   resultados=srt(resultados)
   return resultados
 
-@app.router("/Por_Peso/<Peso1>/<Peso2>")
+@app.route("/Por_Peso/<Peso1>/<Peso2>")
 def PorPeso(Peso1,Peso2):
   Peso1=float(Peso1)
   Peso2=float(Peso2)
