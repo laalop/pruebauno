@@ -9,11 +9,11 @@ base=pd.read_excel("perros.xlsx")
 def Principal():
   return "Esta es una API que te muetra el nombre de perros, raza y estatura"
 
-@app.route("/Por_Numero/<Numero>")
+@app.route("/conumero/<Numero>")
 def PorNumero(Numero):
   Numero=int(Numero)
   fila=base[base["Numero"]==Numero]
-  respuesta=f"El Perro {Numero} es {fila.loc[:,'Nombre']}"
+  respuesta=f"El Perro {Numero} es {fila.loc[:,'nombre']}"
   return respuesta
 
 @app.route("/Por_raza/<raza>")
@@ -28,4 +28,5 @@ def Porestatura(estatura):
   resultados=float(resultados)
   return resultados
 
-print(Por_Nombre(jose))
+if __name__=="__main__":
+  app:run()
