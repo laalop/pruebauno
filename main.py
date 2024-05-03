@@ -28,4 +28,6 @@ def estatura(estatura):
   resultados=float(resultados)
   return resultados
 
-print(estatura)
+
+if __name__=="__main__":
+  app:run()
