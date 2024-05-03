@@ -17,5 +17,3 @@ def PorNumero(Numero):
   return respuesta
 
 print(Por_Numero(2))
-
-if __name__=="__main__":
